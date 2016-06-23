@@ -24,7 +24,8 @@
 		m = (int)(howmuch/1000/60);
 		howmuch = howmuch-m*60*1000;
 		s = (int)(howmuch/1000);
-	}	
+	}
+	response.setHeader("Refresh", "10");
 %>
 <body>
 您登陆的时间为:<%=((Date)session.getAttribute("start")).toLocaleString() %><br>
